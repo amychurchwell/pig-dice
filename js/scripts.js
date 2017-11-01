@@ -1,45 +1,48 @@
 //back-end//
+$(document).ready(function(){
 
-function Player(name){
-  this.name = name;
-  this.round = [];
-  this.total = 0;
-  this.roll = 0;
+  function Player(name, total){
+    this.name = name;
+    this.total = total;
+    round = [];
+  };
+
+  function diceRoll(){
+    debugger;
+    var result = Math.floor((Math.random() * 6) + 1);
+    round.push(result);
+    return result;
+  };
+
+// function score(){
+//     var total = 0;
+//     for (round){
+//     total += round[i];
+//   };
+// };
+
+function score(){
+  var total = 0;
+  for(var i = 0; i < round.length; i++){
+    total += round[i]
+  };
 };
 
-function diceRoll(){
-  var answer = Math.floor((Math.random() * 6) + 1)
-  if (answer === 1){
-    this.round === 0;
-    return "PLAYER TURN IS OVER.";
-  } else {
-    return answer;
-};
-
-// function addScores(){
-//
-// }
-
-var newPlayer = new Player("holkuj");
+// function results(){
+//   var math = diceRoll();
+//   return round.push();
+// };
 
 //front-end//
-$(document).ready(function(){
-  $("#form-p1").submit(function(event){
+var newPlayer = new Player(0, 0);
+
+  $('#form-p1').submit(function(event){
     event.preventDefault();
-    // var finishedScore =
+    // var nameInput = $('#p1name').val();
 
-    // player1.name = $("input#p1name").val();
-    // $("#p1-title").text(player1.name);
-    $('#result').text(newPlayer.roll());
 
-    // $("#form-p2").submit(function(event){
-    //   event.preventDefault();
-    //   var player2 = new Player(name, 0);
-    // });
-    //
-    //   // player1.name = $("input#p1name").val();
-    //   // $("#p1-title").text(player1.name);
-    //   $('#result').text(player2.roll());
-    //   $('#p2score').text();
+    $('#result').text(diceRoll());
+    console.log(round);
+
   });
 });
