@@ -7,6 +7,14 @@ $(document).ready(function(){
     round = [];
   };
 
+  function score(){
+    var total = 0;
+    for(var i = 0, len = round.length; i < len; i++) {
+    total += round[i];
+   };
+    return total ;
+  };
+
   function diceRoll(){
     debugger;
     var result = Math.floor((Math.random() * 6) + 1);
@@ -14,20 +22,21 @@ $(document).ready(function(){
     return result;
   };
 
+
+
+
+function endScore(){
+
+}
+
+
+
 // function score(){
 //     var total = 0;
 //     for (round){
 //     total += round[i];
 //   };
 // };
-
-function score(){
-  var total = 0;
-  for(var i = 0; i < round.length; i++){
-    total += round[i]
-  };
-};
-
 // function results(){
 //   var math = diceRoll();
 //   return round.push();
@@ -43,6 +52,7 @@ var newPlayer = new Player(0, 0);
 
     $('#result').text(diceRoll());
     console.log(round);
+    console.log(score());
 
   });
 });
