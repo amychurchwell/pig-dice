@@ -21,30 +21,47 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12">
-          <form id="form">
+        <div class="col-md-6">
+          <form id="form-p1">
             <label for="roll">Roll<input name='select' type="radio" id="roll"></label>
             <label for="hold">Hold<input name='select' type="radio" id="hold"></label>
             <div class="form-row">
-              <button type="submit" name="button" class="btn btn-danger">CLICK IT</button>
+              <label for="p1name">Enter Your Name:</label>
+              <input name ="p1name" type="text" id="p1name">
+            </div>
+            <div class="form-row">
+            <button type="submit" name="button" class="btn btn-danger">CLICK IT P1</button>
             </div>
           </form>
         </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="card" style="width: 20rem;">
-              <div class="card-body">
-                <h4 class="card-title">Player1</h4>
-                <span id="p1score"></span>
-              </div>
+        <div class="col-md-6">
+          <form id="form-p2">
+            <label for="roll">Roll<input name='select' type="radio" id="roll"></label>
+            <label for="hold">Hold<input name='select' type="radio" id="hold"></label>
+            <div class="form-row">
+              <label for="p2name">Enter Your Name:</label>
+              <input name ="p2name" type="text" id="p2name">
+            </div>
+            <div class="form-row">
+            <button type="submit" name="button" class="btn btn-danger">CLICK IT P2</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card" style="width: 20rem;">
+            <div class="card-body">
+              <h4 class="card-title" id="p1-title">Player1</h4>
+              <span id="p1score"></span>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="card" style="width: 20rem;">
-              <div class="card-body">
-                <h4 class="card-title">Player2</h4>
-                <span id="p2score"></span>
-              </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card" style="width: 20rem;">
+            <div class="card-body">
+              <h4 class="card-title" id="p2-title">Player2</h4>
+              <span id="p2score"></span>
             </div>
           </div>
         </div>
