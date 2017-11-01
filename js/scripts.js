@@ -12,14 +12,14 @@ $(document).ready(function(){
     for(var i = 0, len = round.length; i < len; i++) {
     total += round[i];
    };
-    return total ;
+    return total;
   };
 
   function diceRoll(){
-    debugger;
     var result = Math.floor((Math.random() * 6) + 1);
     if (result === 1) {
       return "BYE YOU SUCK!"
+      round = [];
     } else {
     round.push(result);
     return result;
@@ -27,15 +27,17 @@ $(document).ready(function(){
   };
 
   function endScore(){
-    if (Player.total === 100) {
+    var result = score(+ this.total);
+    round = [];
+    if (result >= 100) {
       return "YAY YOU WIN GET LOST!"
-   } else {
-     return score(round)
+    } else {
+     return result;
    }
  };
 
 //front-end//
-var newPlayer = new Player(0, 0);
+  var newPlayer = new Player();
 
   $('#p1-roll').click(function(event){
     event.preventDefault();
@@ -49,7 +51,7 @@ var newPlayer = new Player(0, 0);
   });
 
   $('#p1-hold').click(function(event){
-    $("#p1total").text(newPlayer.total);
+    $("#p1total").text(endScore());
   });
 });
 
