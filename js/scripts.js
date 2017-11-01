@@ -18,16 +18,40 @@ $(document).ready(function(){
   function diceRoll(){
     debugger;
     var result = Math.floor((Math.random() * 6) + 1);
+    if (result === 1) {
+      return "BYE YOU SUCK!"
+    } else {
     round.push(result);
     return result;
+    }
   };
 
+  function endScore(){
+    if (Player.total === 100) {
+      return "YAY YOU WIN GET LOST!"
+   } else {
+     return score(round)
+   }
+ };
+
+//front-end//
+var newPlayer = new Player(0, 0);
+
+  $('#p1-roll').click(function(event){
+    event.preventDefault();
+    // var nameInput = $('#p1name').val();
 
 
+    $('#result').text(diceRoll());
+    console.log(round);
+    console.log(score());
 
-function endScore(){
+  });
 
-}
+  $('#p1-hold').click(function(event){
+    $("#p1total").text(newPlayer.total);
+  });
+});
 
 
 
@@ -41,18 +65,3 @@ function endScore(){
 //   var math = diceRoll();
 //   return round.push();
 // };
-
-//front-end//
-var newPlayer = new Player(0, 0);
-
-  $('#form-p1').submit(function(event){
-    event.preventDefault();
-    // var nameInput = $('#p1name').val();
-
-
-    $('#result').text(diceRoll());
-    console.log(round);
-    console.log(score());
-
-  });
-});

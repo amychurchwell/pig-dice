@@ -13,3 +13,11 @@ form{
 input{
   margin: 15px;
 }
+
+button {
+  margin: 20px;
+}
+
+#result {
+  align-items: center;
+}
