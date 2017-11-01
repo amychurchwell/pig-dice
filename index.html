@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <title>Pig-Dice</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="jumbotron">
+            <h1 class="display-4">Pig Dice</h1>
+          </div>
+          <div class="jumbotron">
+            <span id="result"></span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <form id="form">
+            <label for="roll">Roll<input name='select' type="radio" id="roll"></label>
+            <label for="hold">Hold<input name='select' type="radio" id="hold"></label>
+            <div class="form-row">
+              <button type="submit" name="button" class="btn btn-danger">CLICK IT</button>
+            </div>
+          </form>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card" style="width: 20rem;">
+              <div class="card-body">
+                <h4 class="card-title">Player1</h4>
+                <span id="p1score"></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card" style="width: 20rem;">
+              <div class="card-body">
+                <h4 class="card-title">Player2</h4>
+                <span id="p2score"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
