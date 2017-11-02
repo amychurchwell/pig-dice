@@ -4,8 +4,17 @@ body{
   background-size: cover;
 }
 
-div .card{
+#jumbo{
+  background: linear-gradient(to right, #e87a99 , #f9c5c5);
+  border-radius: 25px;
+}
+
+.card{
   margin: 20px;
+  border: 5px;
+  border-style: solid;
+  border-color: #f9c5c5;
+  border-radius: 15px;
 }
 
 h4 {
@@ -27,10 +36,24 @@ button {
 .jumbotron {
   background-color: #f9c5c5;
   position: relative;
+  border-radius: 25px;
 }
 
 .card-body {
   background-color: #f9c5c5;
+}
+
+#confetti {
+  display: none;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
 }
 
 #pig{

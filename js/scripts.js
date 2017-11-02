@@ -59,6 +59,7 @@ $(document).ready(function(){
       if (newPlayer.total >= 100) {
         $("#pun").text(punny());
         $("#result").text("YOU WIN!");
+        $('.winner-effect').show();
       }
     });
 
@@ -98,6 +99,7 @@ $(document).ready(function(){
       if (newPlayer2.total >= 100) {
         $("#pun").text(punny());
         $("#result").text("YOU WIN!");
+        $('#confetti').show();
       }
   });
 });
