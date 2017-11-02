@@ -12,7 +12,7 @@
     return result;
   };
 
-  var puns = ["You're the squeal-deal!", "That's what its all a-snout!", "You aint nothing to muck with!", "You've got the chops!"];
+  var puns = ["You're the squeal-deal!", "That's what its all a-snout!", "You aint nothing to muck with!", "You've got the chops!", "You go curl!", "It's 'swine time' baby!", "That's nothing to swine about!", "Get piggy with it!", "You're bacon me crazy!", "You're of a real different snort.", "I pink you won!"];
 
   var punny = function(){
     var result = puns[Math.floor(Math.random() * puns.length)];
@@ -80,10 +80,10 @@ $(document).ready(function(){
 
     if (result === 1){
       newPlayer2.round = 0;
-      $('#result').text("LOSE");
+      $('#result').text("NEXT PLAYER'S TURN");
     }else{
       newPlayer2.round += result;
-      $('#result').text(result);
+      $('#result').text("Score: " + result);
     }
     $('#p2round').text(newPlayer2.round);
   });

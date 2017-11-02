@@ -2,7 +2,21 @@ body{
   margin: 15px;
   background-image: url("../img/pattern.jpg");
   background-size: cover;
+  color: #7E5C42;
 }
+
+ body, a:hover, button:hover{
+   cursor: url(http://cur.cursors-4u.net/nature/nat-4/nat330.cur), progress !important;
+ }
+
+button:hover{
+   cursor: url(http://cur.cursors-4u.net/sports/spo-1/spo58.cur), progress !important;
+ }
+
+ input[type="text"], textarea {
+  background-color : #FFE1EA;
+}
+
 
 #jumbo{
   background: linear-gradient(to right, #e87a99 , #f9c5c5);
