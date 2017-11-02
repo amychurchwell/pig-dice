@@ -16,7 +16,7 @@
             <h1 class="display-1">Pig Dice</h1>
             <p class="lead">Do you have the chops?!?!</p>
               <div class="bubble">
-                <span id="pun">test test test test test test test test</span>
+                <span id="pun"><strong>Oink! Oink! Oink!</strong></span>
               </div>
             <img id="bub" src="img/bubble.gif">
             <img id="pig" src="img/waddles.png">
@@ -28,40 +28,46 @@
       </div>
       <div class="row">
         <div class="col-md-6">
-          <label for="p1name">Enter Your Name:</label>
-          <input name ="p1name" type="text" id="p1name">
-          <div class="form-row">
-            <button type="button" id="p1-roll" name="button-roll-p1" class="btn">ROLL</button>
-            <button type="button" id="p1-hold" name="button-hold-p1" class="btn">HOLD</button>
-          </div>
+          <span id="p1hide">
+            <div class="card text-center" style="width: 20rem;">
+              <div class="card-body">
+                <h3>Enter Your Name:</h3><br>
+                <input name ="p1name" type="text" id="p1name">
+              </div>
+            </div>
+          </span>
         </div>
         <div class="col-md-6">
-          <div class="form-row">
-            <label for="p2name">Enter Your Name:</label>
-            <input name ="p2name" type="text" id="p2name">
-          </div>
-          <div class="form-row">
-            <button type="button" id="p2-roll" name="button-hold-p2" class="btn">ROLL</button>
-            <button type="button" id="p2-hold" name="button-hold-p2" class="btn">HOLD</button>
-          </div>
+          <span id="p2hide">
+            <div class="card text-center" style="width: 20rem;">
+              <div class="card-body">
+                <h3>Enter Your Name:</h3><br>
+                <input name ="p2name" type="text" id="p2name">
+              </div>
+            </div>
+          </span>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6">
           <div class="card" style="width: 20rem;">
             <div class="card-body">
-              <h4 class="card-title" id="p1-title">Player 1</h4>
-              <span id="p1round">Round Total:</span>
-              <span id="p1total">Game Total:</span>
+              <h4 class="card-title" id="p1-title">Player 1</h4><hr>
+              Round Total: <span id="p1round"></span><br>
+              Game Total: <span id="p1total"></span><br>
+              <button type="button" id="p1-roll" name="button-roll-p1" class="btn">ROLL</button>
+              <button type="button" id="p1-hold" name="button-hold-p1" class="btn">HOLD</button>
             </div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="card" style="width: 20rem;">
             <div class="card-body">
-              <h4 class="card-title" id="p2-title">Player 2</h4>
-              <span id="p2round">Round Total:</span>
-              <span id="p2total">Game Total:</span>
+              <h4 class="card-title" id="p2-title">Player 2</h4><hr>
+              Round Total: <span id="p2round"></span><br>
+              Game Total: <span id="p2total"></span><br>
+              <button type="button" id="p2-roll" name="button-hold-p2" class="btn">ROLL</button>
+              <button type="button" id="p2-hold" name="button-hold-p2" class="btn">HOLD</button>
             </div>
           </div>
         </div>

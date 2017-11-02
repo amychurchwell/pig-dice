@@ -6,25 +6,20 @@
     this.round = 0;
   };
 
-  // Player.prototype.score = function(){
-  //   var total = 0;
-  //   for(var i = 0, len = round.length; i < len; i++) {
-  //   total += this.round[i];
-  //  };
-  //   return total;
-  // };
 
   Player.prototype.diceRoll = function(){
     var result = Math.floor((Math.random() * 6) + 1);
     return result;
   };
 
+  var puns = ["You're the squeal-deal!", "That's what its all a-snout!", "You aint nothing to muck with!", "You've got the chops!"];
 
-  Player.prototype.endScore = function(){
-    score(this.round) + this.total;
+  var punny = function(){
+    var result = puns[Math.floor(Math.random() * puns.length)];
+    return result;
   }
 
-var puns = ["You're the squeal-deal!", "That's what its all a-snout!"];
+
 
 //front-end//
 var newPlayer = new Player();
@@ -33,11 +28,13 @@ var newPlayer2 = new Player();
 $(document).ready(function(){
   $('#p1-roll').click(function(event){
     event.preventDefault();
+
     var nameInput = $('#p1name').val();
     var result = newPlayer.diceRoll();
     newPlayer.name = nameInput;
+
     $("#p1-title").text(newPlayer.name);
-    $("#p1name").hide();
+    $("#p1hide").slideUp();
 
 
     if (result === 1){
@@ -56,10 +53,16 @@ $(document).ready(function(){
     var total = newPlayer.total += newPlayer.round;
     $("#p1total").text(total);
 
-    if (newPlayer.total >= 100) {
-      $("#result").text("YOU WIN!");
-    }
-  });
+    newPlayer.round = 0;
+
+
+      if (newPlayer.total >= 100) {
+        $("#pun").text(punny());
+        $("#result").text("YOU WIN!");
+      }
+    });
+
+
 
 
 
@@ -71,7 +74,7 @@ $(document).ready(function(){
     var result = newPlayer2.diceRoll();
     newPlayer2.name = nameInput;
     $("#p2-title").text(newPlayer2.name);
-    $("#p2name").hide();
+    $("#p2hide").slideUp();
 
 
     if (result === 1){
@@ -89,5 +92,12 @@ $(document).ready(function(){
 
     var total = newPlayer2.total += newPlayer2.round;
     $("#p2total").text(total);
+
+    newPlayer2.round = 0;
+
+      if (newPlayer2.total >= 100) {
+        $("#pun").text(punny());
+        $("#result").text("YOU WIN!");
+      }
   });
 });

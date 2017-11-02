@@ -8,18 +8,15 @@ div .card{
   margin: 20px;
 }
 
-form{
-  margin: 20px;
-}
-
-input{
-  margin: 15px;
+h4 {
+  margin-left: 90px;
 }
 
 button {
-  margin: 20px;
   background-color: #e87a99;
-  margin-left: 65px;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 8px;
 }
 
 #result {
@@ -49,17 +46,14 @@ button {
   right: 110px;
   z-index: 3;
   top: 100px;
-
 }
-
-
 
 div .bubble{
   width: 183px;
   position: absolute;
   height: 84px;
   right: 115px;
-  bottom: 20px;
+  bottom: 67px;
   z-index: 4;
-  padding: 9px;
+  padding: 10px;
 }
