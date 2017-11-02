@@ -2,7 +2,7 @@
 
   function Player(name, total, round){
     this.name = name;
-    this.total = total;
+    this.total = 0;
     this.round = 0;
   };
 
@@ -27,13 +27,16 @@
 
 //front-end//
 var newPlayer = new Player();
+var newPlayer2 = new Player();
 
-  $(document).ready(function(){
+$(document).ready(function(){
   $('#p1-roll').click(function(event){
     event.preventDefault();
-    // var nameInput = $('#p1name').val();
-
-    var result = newPlayer.diceRoll()
+    var nameInput = $('#p1name').val();
+    var result = newPlayer.diceRoll();
+    newPlayer.name = nameInput;
+    $("#p1-title").text(newPlayer.name);
+    $("#p1name").hide();
 
 
     if (result === 1){
@@ -43,44 +46,43 @@ var newPlayer = new Player();
       newPlayer.round += result;
       $('#result').text(result);
     }
-
-    $('#p1total').text(newPlayer.round);
+    $('#p1round').text(newPlayer.round);
   });
 
   $('#p1-hold').click(function(event){
-    $("#p1total").text(endScore());
+    event.preventDefault();
+
+    var total = newPlayer.total += newPlayer.round;
+    $("#p1total").text(total);
+  });
+
+
+
+//player 2 starts here//
+
+  $('#p2-roll').click(function(event){
+    event.preventDefault();
+    var nameInput = $('#p2name').val();
+    var result = newPlayer2.diceRoll();
+    newPlayer2.name = nameInput;
+    $("#p2-title").text(newPlayer2.name);
+    $("#p2name").hide();
+
+
+    if (result === 1){
+      newPlayer2.round = 0;
+      $('#result').text("LOSE");
+    }else{
+      newPlayer2.round += result;
+      $('#result').text(result);
+    }
+    $('#p2round').text(newPlayer2.round);
+  });
+
+  $('#p2-hold').click(function(event){
+    event.preventDefault();
+
+    var total = newPlayer2.total += newPlayer2.round;
+    $("#p2total").text(total);
   });
 });
-
-
-
-// function diceRoll(){
-//   var result = Math.floor((Math.random() * 6) + 1);
-//   if (result === 1) {
-//     return "BYE YOU SUCK!"
-//   } else {
-//   round.push(result);
-//   return result;
-//   }
-// };
-// function score(){
-//     var total = 0;
-//     for (round){
-//     total += round[i];
-//   };
-// };
-// function results(){
-//   var math = diceRoll();
-//   return round.push();
-// };
-
-
-//  function endScore(){
-//    var result = score(+ this.total);
-//    round = [];
-//    if (result >= 100) {
-//      return "YAY YOU WIN GET LOST!"
-//    } else {
-//     return result;
-//   }
-// };

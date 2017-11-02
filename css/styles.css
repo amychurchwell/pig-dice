@@ -1,5 +1,7 @@
 body{
   margin: 15px;
+  background-image: url("../img/pattern.jpg");
+  background-size: cover;
 }
 
 div .card{
@@ -20,4 +22,28 @@ button {
 
 #result {
   align-items: center;
+}
+
+.jumbotron {
+  background-color: #f9c5c5;
+  color: white;
+}
+
+.card-body {
+  background-color: #f9c5c5;
+}
+
+#pig{
+  width: 200px;
+  position: absolute;
+  right: -10px;
+}
+
+#bub{
+  width: 200px;
+  position: absolute;
+  right: 110px;
+  z-index: 2;
+  top: 100px;
+
 }
