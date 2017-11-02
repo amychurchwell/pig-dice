@@ -24,6 +24,7 @@
     score(this.round) + this.total;
   }
 
+var puns = ["You're the squeal-deal!", "That's what its all a-snout!"];
 
 //front-end//
 var newPlayer = new Player();
@@ -41,10 +42,10 @@ $(document).ready(function(){
 
     if (result === 1){
       newPlayer.round = 0;
-      $('#result').text("LOSE");
+      $('#result').text("NEXT PLAYER'S TURN");
     }else{
       newPlayer.round += result;
-      $('#result').text(result);
+      $('#result').text("Score: " + result);
     }
     $('#p1round').text(newPlayer.round);
   });
@@ -54,6 +55,10 @@ $(document).ready(function(){
 
     var total = newPlayer.total += newPlayer.round;
     $("#p1total").text(total);
+
+    if (newPlayer.total >= 100) {
+      $("#result").text("YOU WIN!");
+    }
   });
 
 

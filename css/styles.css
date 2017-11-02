@@ -18,15 +18,18 @@ input{
 
 button {
   margin: 20px;
+  background-color: #e87a99;
+  margin-left: 65px;
 }
 
 #result {
-  align-items: center;
+  text-align: center;
+  font-size: 50px;
 }
 
 .jumbotron {
   background-color: #f9c5c5;
-  color: white;
+  position: relative;
 }
 
 .card-body {
@@ -37,13 +40,26 @@ button {
   width: 200px;
   position: absolute;
   right: -10px;
+  z-index: 2;
 }
 
 #bub{
   width: 200px;
   position: absolute;
   right: 110px;
-  z-index: 2;
+  z-index: 3;
   top: 100px;
 
+}
+
+
+
+div .bubble{
+  width: 183px;
+  position: absolute;
+  height: 84px;
+  right: 115px;
+  bottom: 20px;
+  z-index: 4;
+  padding: 9px;
 }

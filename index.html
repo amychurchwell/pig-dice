@@ -13,12 +13,15 @@
       <div class="row">
         <div class="col-md-12">
           <div class="jumbotron">
-            <h1 class="display-4">Pig Dice</h1>
+            <h1 class="display-1">Pig Dice</h1>
             <p class="lead">Do you have the chops?!?!</p>
+              <div class="bubble">
+                <span id="pun">test test test test test test test test</span>
+              </div>
             <img id="bub" src="img/bubble.gif">
             <img id="pig" src="img/waddles.png">
           </div>
-          <div class="jumbotron">
+          <div class="jumbotron" id="jumbo">
             <h2 id="result"></h2>
           </div>
         </div>
@@ -28,8 +31,8 @@
           <label for="p1name">Enter Your Name:</label>
           <input name ="p1name" type="text" id="p1name">
           <div class="form-row">
-            <button type="button" id="p1-roll" name="button-roll-p1" class="btn btn-danger">ROLL</button>
-            <button type="button" id="p1-hold" name="button-hold-p1" class="btn btn-danger">HOLD</button>
+            <button type="button" id="p1-roll" name="button-roll-p1" class="btn">ROLL</button>
+            <button type="button" id="p1-hold" name="button-hold-p1" class="btn">HOLD</button>
           </div>
         </div>
         <div class="col-md-6">
@@ -38,8 +41,8 @@
             <input name ="p2name" type="text" id="p2name">
           </div>
           <div class="form-row">
-            <button type="button" id="p2-roll" name="button-hold-p2" class="btn btn-danger">ROLL</button>
-            <button type="button" id="p2-hold" name="button-hold-p2" class="btn btn-danger">HOLD</button>
+            <button type="button" id="p2-roll" name="button-hold-p2" class="btn">ROLL</button>
+            <button type="button" id="p2-hold" name="button-hold-p2" class="btn">HOLD</button>
           </div>
         </div>
       </div>
@@ -48,8 +51,8 @@
           <div class="card" style="width: 20rem;">
             <div class="card-body">
               <h4 class="card-title" id="p1-title">Player 1</h4>
-              <span id="p1round"></span>
-              <span id="p1total"></span>
+              <span id="p1round">Round Total:</span>
+              <span id="p1total">Game Total:</span>
             </div>
           </div>
         </div>
@@ -57,8 +60,8 @@
           <div class="card" style="width: 20rem;">
             <div class="card-body">
               <h4 class="card-title" id="p2-title">Player 2</h4>
-              <span id="p2round"></span>
-              <span id="p2total"></span>
+              <span id="p2round">Round Total:</span>
+              <span id="p2total">Game Total:</span>
             </div>
           </div>
         </div>
