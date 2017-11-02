@@ -24,6 +24,7 @@
 //front-end//
 var newPlayer = new Player();
 var newPlayer2 = new Player();
+var sound = new Audio("img/pig4.wav");
 
 $(document).ready(function(){
   $('#p1-roll').click(function(event){
@@ -37,6 +38,7 @@ $(document).ready(function(){
     $("#p1hide").slideUp();
 
 
+
     if (result === 1){
       newPlayer.round = 0;
       $('#result').text("NEXT PLAYER'S TURN");
@@ -45,27 +47,25 @@ $(document).ready(function(){
       $('#result').text("Score: " + result);
     }
     $('#p1round').text(newPlayer.round);
+
   });
 
   $('#p1-hold').click(function(event){
     event.preventDefault();
+
 
     var total = newPlayer.total += newPlayer.round;
     $("#p1total").text(total);
 
     newPlayer.round = 0;
 
+    if (newPlayer.total >= 100) {
+      $("#pun").text(punny());
+      $("#result").text("YOU WIN!");
+      $('.winner-effect').show();
+    }
 
-      if (newPlayer.total >= 100) {
-        $("#pun").text(punny());
-        $("#result").text("YOU WIN!");
-        $('.winner-effect').show();
-      }
-    });
-
-
-
-
+  });
 
 //player 2 starts here//
 
@@ -76,6 +76,7 @@ $(document).ready(function(){
     newPlayer2.name = nameInput;
     $("#p2-title").text(newPlayer2.name);
     $("#p2hide").slideUp();
+
 
 
     if (result === 1){
@@ -96,10 +97,15 @@ $(document).ready(function(){
 
     newPlayer2.round = 0;
 
-      if (newPlayer2.total >= 100) {
-        $("#pun").text(punny());
-        $("#result").text("YOU WIN!");
-        $('#confetti').show();
-      }
+    if (newPlayer2.total >= 100) {
+      $("#pun").text(punny());
+      $("#result").text("YOU WIN!");
+      $('#confetti').show();
+    }
+  });
+
+  $('#pig').click(function(event){
+    event.preventDefault();
+    sound.play();
   });
 });

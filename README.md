@@ -31,7 +31,7 @@ A web application where two users can play a game of pig dice.
 #### GITHUB PAGES REMEMBER
 * Open web browser and go to the [GitHub Pages][4].
 
-[4]: https://lewdavidson.github.io/pig-dice/index.html "GitHub Pages"
+[4]: https://lewdavidson.github.io/pig-dice/ "GitHub Pages"
 
 ## Known Bugs
 
